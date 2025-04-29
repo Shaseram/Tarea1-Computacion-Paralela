@@ -17,7 +17,7 @@ public class Client {
 	public Client() {}
 
 	public void startClient() throws RemoteException, NotBoundException {
-		Registry registry = LocateRegistry.getRegistry("localhost", 1009);
+		Registry registry = LocateRegistry.getRegistry("localhost", 7777);
 		server = (InterfazDeServer) registry.lookup("server");
 	}
 
@@ -25,8 +25,18 @@ public class Client {
 	public void mostrarPersonas() throws RemoteException {
 		ArrayList<Persona> personas = server.getPersona();
 		for(Persona persona : personas) {
-			System.out.println(persona.getNombre() + " " + persona.getEdad());
+			System.out.println("Nombre:"+persona.getNombre());
+			System.out.println("Edad:"+persona.getEdad());
+			System.out.println("");
 		}
+		
+	}
+	
+	public void crearRegistro(String nombre, int edad) throws RemoteException {
+		server.CrearPersona(nombre, edad);
+		
+		System.out.println("Registro de ["+ nombre +"|" + edad +"]creado existosamente!");
+		
 	}
 }
 	

@@ -20,21 +20,20 @@ public class ServerImpl implements InterfazDeServer {
 	
 	private void crearBD() {
 		Persona persona1 = new Persona("Vicente", 21);
-		Persona persona2 = new Persona("Pepe", 100);
-		BD_personas.add(persona2);
+		Persona persona2 = new Persona("Daniel", 20);
 		BD_personas.add(persona1);
+		BD_personas.add(persona2);
 	}
+	
 	
 	public ArrayList<Persona> getPersona() {
 		return BD_personas;
 	}
-
-
-	@Override
-	public Persona Persona(String nombre, int edad) {
+	
+	
+	public Persona CrearPersona(String nombre, int edad) {
 		Persona persona = new Persona(nombre, edad);
+		BD_personas.add(persona);
 		return persona;
 	}
-	
-	
 }

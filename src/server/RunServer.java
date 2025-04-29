@@ -12,11 +12,11 @@ public class RunServer {
 	public static void main(String[] args) throws RemoteException, AlreadyBoundException {
 		
 		InterfazDeServer server = new ServerImpl();
-		Registry registry = LocateRegistry.createRegistry(1009);
+		Registry registry = LocateRegistry.createRegistry(7777);
 		registry.bind("server", server);
 		
 		System.out.println("Servidor Arriba!!");
-		System.out.println(server.getPersona());
+		
 	}
 
 }
