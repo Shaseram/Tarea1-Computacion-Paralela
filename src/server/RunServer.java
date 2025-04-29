@@ -15,8 +15,6 @@ public class RunServer {
 		Registry registry = LocateRegistry.createRegistry(7777);
 		registry.bind("server", server);
 		
-		System.out.println("Servidor Arriba!!");
-		
+		System.out.println("Servidor Arriba!!");	
 	}
-
 }

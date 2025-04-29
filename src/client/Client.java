@@ -35,7 +35,7 @@ public class Client {
 	public void crearRegistro(String nombre, int edad) throws RemoteException {
 		server.CrearPersona(nombre, edad);
 		
-		System.out.println("Registro de ["+ nombre +"|" + edad +"]creado existosamente!");
+		System.out.println("Registro creado existosamente!");
 		
 	}
 }

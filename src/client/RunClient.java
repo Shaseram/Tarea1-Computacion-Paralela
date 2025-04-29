@@ -31,9 +31,10 @@ public class RunClient {
 			String entrada = br.readLine();
 			int opcion = Integer.parseInt(entrada);
 			
-			while(opcion > 3 || opcion < 1) {
+			while(Integer.parseInt(entrada) > 3 || Integer.parseInt(entrada) < 1) {
 				System.out.println("Entrada inválida, ingrese una opción válida");
 				entrada = br.readLine();
+				opcion = Integer.parseInt(entrada);
 			}
 			
 			switch(opcion) {
